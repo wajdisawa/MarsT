@@ -1,0 +1,32 @@
+{
+  "name": "wajdisawa/marst",
+  "description": "a microservice to calculate mars sol time MSD and Martian Coordinated Time MTC from earth timestamp.",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "wajdi sawafta",
+      "email": "wajdee.sawaf@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": { "Wajdisawa\\MarsT\\": "src/" }
+  },"autoload-dev": {
+    "psr-4": {"Wajdisawa\\MarsT\\Tests\\": "tests/"}
+  },
+  "require": {
+    "php": "~7.4",
+    "ext-json": "*",
+    "php-di/php-di": "^6.2",
+    "php-di/slim-bridge": "^3.0",
+    "slim/http": "^1.0",
+    "slim/psr7": "^1.2",
+    "slim/slim": "^4.5"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.37",
+    "phpunit/phpunit": "^9.3",
+    "nyholm/psr7": "^1.3"
+  }
+}

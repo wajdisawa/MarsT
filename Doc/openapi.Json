@@ -1,0 +1,68 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MarsT Service",
+    "version": "1.0.0",
+    "description": "This is a microservice to calculate earth timestamp to mars sol date and martian coordinated time",
+    "contact": {
+      "email": "wajdee.sawaf@gmail.com",
+      "name": "wajdi Sawafta"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:9090"
+    }
+  ],
+  "tags": [
+    {
+      "name": "MarsT",
+      "description": "MarsT APIs"
+    }
+  ],
+  "paths": {
+    "/time": {
+      "post": {
+        "tags": [
+          "time"
+        ],
+        "summary": "convert EarthTime to MSD and MTC",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DraftTimeSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Account was added",
+            "content": {
+              "application/json": {
+              }
+            }
+          },
+          "500": {
+            "description": "Server error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DraftTimeSchema": {
+        "type": "object",
+        "properties": {
+          "timeUTC": {
+            "type": "string",
+            "example": "20 Aug 2020 07:15:10 UTC"
+          }
+        }
+      }
+    }
+  }
+}
